@@ -223,12 +223,14 @@
 // }
 // console.log(result);
 
+//8
+
 // var a = 5;
-// var b = 4;
-// var c = "+";
+// var b = 0;
+// var c = "/";
 // result = 0;
 
-// switch (a, b, c) {
+// switch ((a, b, c)) {
 //     case "+":
 //         result = a + b;
 //         break;
