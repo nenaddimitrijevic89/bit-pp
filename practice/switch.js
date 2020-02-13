@@ -226,11 +226,11 @@
 //8
 
 // var a = 5;
-// var b = 0;
-// var c = "/";
+// var b = 5;
+// var operator = "/";
 // result = 0;
 
-// switch ((a, b, c)) {
+// switch (operator) {
 //     case "+":
 //         result = a + b;
 //         break;
@@ -238,13 +238,12 @@
 //         result = a - b;
 //         break;
 //     case "/":
-//         result = a / b;
+//         if (b !== 0) {
+//             result = a / b;
+//         }
 //         break;
 //     case "*":
 //         result = a * b;
-//         break;
-//     default:
-//         result = 0;
 //         break;
 // }
 // console.log(result);

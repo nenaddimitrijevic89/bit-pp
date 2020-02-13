@@ -56,15 +56,33 @@
 //     console.log(a[4]);
 // }
 // if (a[5] % 3 === 0) {
-//     console.log(a[5])
+//     console.log(a[5]);
 // }
 // if (a[6] % 3 === 0) {
 //     console.log(a[6]);
 // }
 // if (a[7] % 3 === 0) {
-//     console.log(a[7])
+//     console.log(a[7]);
 // }
 // if (a[8] % 3 === 0) {
 //     console.log(a[8]);
 // }
 
+//5
+// var a = [
+//     [1, 2, 1, 24],
+//     [8, 11, 9, 4],
+//     [7, 0, 7, 27],
+//     [7, 4, 28, 14],
+//     [3, 10, 26, 7]
+// ];
+// var index = [];
+// for (var i = 0; i < a.length; i++) {
+//     for (var j = 0; j < a[i].length; j++) {
+//         if (a[i][j] === 24) {
+//             index.push([i, j]);
+//             //index.push(i, j);
+//         }
+//     }
+// }
+// console.log(index);
