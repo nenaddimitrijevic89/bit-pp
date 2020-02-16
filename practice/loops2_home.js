@@ -133,3 +133,14 @@
 //     }
 // }
 // console.log(newArr);
+
+/*******************       isSymmetric          *****************/
+
+var arr = [2, 4, -2, 7, -2, 4, 2];
+var isSymmetric = "The array is symmetric";
+for (var i = 0; i < arr.length; i++) {
+    if (arr[i] !== arr[arr.length - 1 - i]) {
+        isSymmetric = "The array is not symetric";
+    }
+}
+console.log(isSymmetric);
