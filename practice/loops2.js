@@ -36,17 +36,17 @@
 
 /***************************************************************/
 
-// var arr = [4, 2, 2, 1, -1, 6];
-// var index = 0;
-// var min = arr[index];
-// var pom = arr[index];
-// for (var i = 0; i < arr.length; i++) {
-//     if (arr[i] < min) {
-//         pom = min;
-//         min = arr[i];
-//     }
-// }
-// console.log(pom);
+var arr = [4, 2, 2, 1, -1, 0, 6];
+var index = 0;
+var min = arr[index];
+var pom = arr[index];
+for (var i = 0; i < arr.length; i++) {
+    if (arr[i] < min) {
+        pom = min;
+        min = arr[i];
+    }
+}
+console.log(pom);
 
 /***********************************************************/
 
@@ -76,7 +76,7 @@
 var a = [2, -2, 33, 12, 5, 8];
 var e = 78;
 var p = 3;
-var arr = []
+var arr = [];
 for (var i = 0; i < a.length; i++) {
     //if (p > a.length - 1) {
     if (p === i) {
@@ -88,8 +88,5 @@ for (var i = 0; i < a.length; i++) {
     // if (p > arr.length - 1) {
     //     console.log('error')
     // }
-
-
 }
-console.log(arr)
-
+console.log(arr);
