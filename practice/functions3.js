@@ -88,7 +88,6 @@
 // var res = numb(12345)
 // console.log(typeof res)
 
-
 /****   5   ******/
 
 // function lastEl(arr, n) {
@@ -142,20 +141,72 @@
 
 /******    8   ******/
 
-function findWord(str, word) {
-    var newStr = "";
-    var newArr = [];
-    var sum = 0;
-    for (var i = 0; i < str.length; i++) {
-        if (str[i] !== " ") {
-            newStr += str[i];
-        } else {
-            newStr += ","
-        }
-        newArr[newArr.length] = newStr;
-        if (newArr[i] === word) {
-            sum++;
-        }
-    } return newArr;
-}
-console.log(findWord("the quick brown fox", "fox"));
+// function findWord(str, word) {
+//     var newStr = "";
+//     var sum = 0;
+//     for (var i = 0; i < str.length; i++) {
+//         if (str[i] !== " ") {
+//             newStr += str[i];
+//         } else {
+//             if (newStr === word) {
+//                 sum++;
+//             }
+//             newStr = "";
+//         }
+//     }
+//     if (newStr === word) {
+//         sum++;
+//     }
+//     return sum;
+// }
+// console.log(findWord("the quick fox brown fox fox", "fox"));
+
+/****     9    ****/
+
+// function hideEmail(input) {
+//     var newStr = "";
+//     var helpStr = "";
+//     var count = 0;
+//     var finalStr = "";
+//     for (var i = 0; i < input.length; i++) {
+//         if (input[i] !== "@") {
+//             helpStr += input[i];
+//         }
+//         if (input[i] === "@") {
+//             count = i;
+//             break;
+//         }
+//     }
+//     for (var j = count; j < input.length; j++) {
+//         newStr += input[j];
+//     }
+//     for (var k = 0; k < helpStr.length / 4; k++) {
+//         finalStr = finalStr + helpStr[k];
+//     }
+//     return finalStr + "..." + newStr;
+// }
+// console.log(hideEmail("nenaddimitrijevic89@gmail.com"));
+
+/****   10    *****/
+
+// function mostFreqItem(arr) {
+//     var str = "";
+//     var str2 = "";
+//     var count = 0;
+//     var count2 = 0;
+//     for (var i = 0; i < arr.length; i++) {
+//         count = 0;
+//         for (var j = 0; j < arr.length; j++) {
+//             if (arr[i] === arr[j]) {
+//                 count++;
+//                 str = arr[i];
+//             }
+//         }
+//         if (count > count2) {
+//             count2 = count;
+//             str2 = str;
+//         }
+//     }
+//     return str2 + ":" + count2;
+// }
+// console.log(mostFreqItem([3, "a", "a", "a", 2, 3, "a", 3, "a", 2, 4, 9, 3]));
