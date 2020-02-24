@@ -1,209 +1,212 @@
-/*****       1     ********/
+/*****    1   *****/
 
-// function isString(input) {
-//     if (typeof input === "string") {
-//         return true;
-//     }
-//     return false;
-// }
-// var result = isString(3);
-// console.log(result);
-
-/******      2     *******/
-
-// function isBlank(input) {
-//     if (typeof input !== "string") {
-//         return false;
-//     }
-//     for (var i = 0; i < input.length; i++) {
-//         if (input[i] !== " ") {
-//             return false;
-//         }
-//     }
-
-//     return true;
-// }
-
-// var result = isBlank(12);
-// console.log(result);
-
-/*******    3     ******/
-
-// function concatStr(str, n) {
+// function insertString(str1, str2, n) {
 //     var newStr = "";
-//     for (var i = 0; i < n; i++) {
-//         newStr = newStr + str;
+//     if (n === undefined) {
+//         newStr = str2 + str1;
+//     }
+//     for (var i = 0; i < str1.length; i++) {
+//         if (i === n) {
+//             newStr = newStr + str2;
+//         }
+//         newStr = newStr + str1[i];
 //     }
 //     return newStr;
 // }
-
-// var result = concatStr("ha", 5);
+// var result = insertString("My random string", " JS ", 9);
 // console.log(result);
 
-/******    4     *******/
+/****   2    *****/
 
-// function countStr(str, letter) {
-//     var a = 0;
-//     for (var i = 0; i < str.length; i++) {
-//         if (str[i] === letter) {
-//             a++;
-//         }
-
-//     }
-//     return a;
-// }
-
-// var result = countStr("Nikolaaoooaa", "o");
-// console.log(result);
-
-/********     5    ******/
-
-// function firstPosition(str, n) {
-//     for (var i = 0; i < str.length; i++) {
-//         if (str[i] === n) {
-//             return i+1;
-//         }
-//     }
-//     return -1;
-// }
-
-// var result = firstPosition("nikolka", "k");
-// console.log(result);
-
-/********     6    ********/
-
-// function lastPosition(str, n) {
-//     for (var i = str.length - 1; i >= 0; i--) {
-//         if (str[i] === n) {
-//             return i+1;
-//         }
-//     }
-//     return -1;
-// }
-
-// var result = lastPosition("nikolakok", "k");
-// console.log(result);
-
-/*******    7    ********/
-
-// function convertStr(str) {
-//     var a = [];
-//     for (var i = 0; i < str.length; i++) {
-//         if (str[i] === " ") {
-//             a[a.length] = null;
-//         } else {
-//             a[a.length] = str[i];
-//         }
-//     }
-//     return a;
-// }
-
-// var result = convertStr("My random string");
-// console.log(result);
-
-/*******     8     *******/
-
-// function isPrime(numb) {
-//     for (var i = 2; i < numb; i++) {
-//         if (numb % i === 0) {
-//             return false;
-//         }
-//     }
-
-//     return true;
-// }
-// var result = isPrime(12);
-// console.log(result);
-
-/*****    9     *****/
-
-// function replaceSpaceWithDashes(str, separator) {
-//     if (typeof separator === "undefined") {
-//         separator = "-";
-//     }
+// function joinElIntoString(arr) {
 //     var newStr = "";
-//     for (var i = 0; i < str.length; i++) {
-//         if (str[i] === " ") {
-//             newStr += separator;
-//         } else {
-//             newStr += str[i];
-//         }
-//     }
-//     return newStr;
-// }
-// var result = replaceSpaceWithDashes("Nenad je  hirurg");
-// console.log(result);
-
-/******    10     ******/
-
-// function addDot(str, n) {
-//     var newStr = "";
-//     for (var i = 0; i < n; i++) {
-//         newStr += str[i];
-//     }
-//     newStr += "...";
-//     return newStr;
-// }
-// var result = addDot("Nenad Dimitrijevic", 8);
-// console.log(result);
-
-/*****    11    ******/
-
-// function convertArrOfStrings(arr) {
-//     var newArr = [];
 //     for (var i = 0; i < arr.length; i++) {
-//         if (typeof arr[i] !== "number" && isFinite(arr[i])) {
-//             newArr[newArr.length] = parseFloat(arr[i]);
+//         if (typeof arr[i] !== 'undefined' && isFinite(arr[i]) && arr[i] !== null) {
+//             newStr = newStr + arr[i] + ",";
 //         }
 //     }
-//     return newArr;
+//     return newStr;
 // }
-// var result = convertArrOfStrings([
-//     "1",
-//     "21",
-//     undefined,
+// var result = joinElIntoString([
 //     NaN,
-//     "42",
-//     "1e+3",
-//     Infinity
+//     0,
+//     15,
+//     false, -22,
+//     Infinity,
+//     "",
+//     undefined,
+//     47,
+//     null
 // ]);
 // console.log(result);
 
-/*****   12   *******/
+/*****   3   *****/
 
-// function retirement(birthYear, gender) {
-//     var age;
-//     if (gender === "male") {
-//         age = 65 - (2020 - birthYear);
-//         if (age <= 0) {
-//             return "Already retired!";
+// function filterFalsy(arr) {
+//     var newArr = [];
+//     for (var i = 0; i < arr.length; i++) {
+//         if (arr[i]) {
+//             newArr[newArr.length] = arr[i]
 //         }
-//     } else {
-//         age = 60 - (2020 - birthYear);
-//         if (age <= 0) {
-//             return "Already retired!";
-//         }
-//     }
-//     return age;
+//     } return newArr;
 // }
-// var result = retirement(1654, "female");
+// var result = filterFalsy([NaN,
+//     0,
+//     15,
+//     false, -22,
+//     "",
+//     undefined,
+//     47,
+//     null]);
 // console.log(result);
 
-/*****    13    *******/
+/****   4   *****/
 
-// function humnizeNumb(numb) {
-//     if (numb % 100 >= 11 && numb % 100 <= 13) {
-//         return numb + "th";
+// function reverseNumb(numb) {
+//     var a;
+//     var b = "";
+//     a = numb + "";
+//     for (var i = a.length - 1; i >= 0; i--) {
+//         b = b + a[i];
 //     }
-//     switch (numb % 10) {
-//         case 1:
-//             return numb + "st";
-//         case 2:
-//             return numb + "nd";
-//         case 3:
-//             return numb + "rd";
-//     }
-//     return numb + "th";
+//     return parseFloat(b);
 // }
-// var result = humnizeNumb(1002);
+// var result = reverseNumb(12345);
+// console.log(result)
+
+/*****   4    ******/
+
+// function numb(br) {
+//     var a;
+//     var b = "";
+//     a = br + "";
+//     for (var i = a.length - 1; i >= 0; i--) {
+//         b = b + a[i]
+//     } return parseFloat(b);
+// }
+
+// var res = numb(12345)
+// console.log(typeof res)
+
+/****   5   ******/
+
+// function lastEl(arr, n) {
+//     if (n === undefined) {
+//         return arr[arr.length - 1];
+//     }
+
+//     var newArr = [];
+//     for (var i = arr.length - n; i < arr.length; i++) {
+//         newArr[newArr.length] = arr[i];
+//     }
+//     return newArr;
+// }
+// var result = lastEl([1, 2, 3, 4, 5, 6], 3)
 // console.log(result);
+
+/****   6   ******/
+
+// function arrOfEl(numb, el) {
+//     if (el === undefined) {
+//         el = null;
+//     }
+
+//     var newArr = [];
+//     for (var i = 0; i < numb; i++) {
+//         newArr[newArr.length] = el;
+//     }
+
+//     return newArr
+// }
+// console.log(arrOfEl(5, 0))
+
+/******    7   ******/
+
+// function perfectNumb(numb) {
+//     var sum = 0;
+//     for (var i = 0; i < numb; i++) {
+//         if (numb % i === 0) {
+//             sum = sum + i;
+//         }
+//     }
+
+//     if (sum === numb) {
+//         return true;
+//     }
+
+//     return false;
+// }
+// var result = perfectNumb(496);
+// console.log(result);
+
+/******    8   ******/
+
+// function findWord(str, word) {
+//     var newStr = "";
+//     var sum = 0;
+//     for (var i = 0; i < str.length; i++) {
+//         if (str[i] !== " ") {
+//             newStr += str[i];
+//         } else {
+//             if (newStr === word) {
+//                 sum++;
+//             }
+//             newStr = "";
+//         }
+//     }
+//     if (newStr === word) {
+//         sum++;
+//     }
+//     return sum;
+// }
+// console.log(findWord("the quick fox brown fox fox", "fox"));
+
+/****     9    ****/
+
+// function hideEmail(input) {
+//     var newStr = "";
+//     var helpStr = "";
+//     var count = 0;
+//     var finalStr = "";
+//     for (var i = 0; i < input.length; i++) {
+//         if (input[i] !== "@") {
+//             helpStr += input[i];
+//         }
+//         if (input[i] === "@") {
+//             count = i;
+//             break;
+//         }
+//     }
+//     for (var j = count; j < input.length; j++) {
+//         newStr += input[j];
+//     }
+//     for (var k = 0; k < helpStr.length / 4; k++) {
+//         finalStr = finalStr + helpStr[k];
+//     }
+//     return finalStr + "..." + newStr;
+// }
+// console.log(hideEmail("nenaddimitrijevic89@gmail.com"));
+
+/****   10    *****/
+
+// function mostFreqItem(arr) {
+//     var str = "";
+//     var str2 = "";
+//     var count = 0;
+//     var count2 = 0;
+//     for (var i = 0; i < arr.length; i++) {
+//         count = 0;
+//         for (var j = 0; j < arr.length; j++) {
+//             if (arr[i] === arr[j]) {
+//                 count++;
+//                 str = arr[i];
+//             }
+//         }
+//         if (count > count2) {
+//             count2 = count;
+//             str2 = str;
+//         }
+//     }
+//     return str2 + ":" + count2;
+// }
+// console.log(mostFreqItem([3, "a", "a", "a", 2, 3, "a", 3, "a", 2, 4, 9, 3]));
