@@ -57,12 +57,10 @@
 // function divideAndAdd(arr) {
 //     var newArr = [];
 //     for (var i = 0; i < arr.length; i++) {
-//         if (arr[i] <= 0) {
-//             newArr[newArr.length] = 20;
-//         } else {
-//             newArr[newArr.length] = arr[i] / 2 + 5;
+//         newArr[newArr.length] = arr[i] / 2 + 5;
+//         if (newArr[i] === 0) {
+//             newArr[i] = 20;
 //         }
-
 //     }
 //     return newArr;
 // }
@@ -97,9 +95,9 @@
 // }
 // grades(students, points);
 
-/****    6     ****/
+// /****    6     ****/
 
-// count = 0;
+// var count = 0;
 // for (var i = 0; i < 1001; i++) {
 //     if (i % 2 === 0) {
 //         count += i;
@@ -111,3 +109,20 @@
 // count = count * 12.5;
 // console.log(count)
 
+
+/****   7   ****/
+
+// var array = ["M", "Anne", 12, "Steve", "Joe", "John", "David", "Mark", true, "A"];
+
+// var firstTwo = function (arr) {
+//     var newStr = "";
+//     for (var i = 0; i < arr.length; i++) {
+//         if (typeof arr[i] === "string" && arr[i].length > 1) {
+//             newStr += arr[i][0];
+//             newStr += arr[i][1]
+//         }
+
+//     }
+//     return newStr;
+// }
+// console.log(firstTwo(array));
