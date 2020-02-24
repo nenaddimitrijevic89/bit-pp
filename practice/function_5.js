@@ -22,7 +22,6 @@
 //     return newArr;
 // }
 
-
 // console.log(switchMinAndMax(array));
 
 /****   1  drugi nacin    ****/
@@ -48,7 +47,6 @@
 
 //     return arr;
 // }
-
 
 // console.log(switchMinAndMax(array));
 
@@ -95,6 +93,14 @@
 // }
 // grades(students, points);
 
+/****   4    ****/
+
+var arr = [13, 11, 15, 5, 6, 1, 8, 12];
+
+var sortedArr = function(array) {
+    for (var)
+}
+
 // /****    6     ****/
 
 // var count = 0;
@@ -108,7 +114,6 @@
 // }
 // count = count * 12.5;
 // console.log(count)
-
 
 /****   7   ****/
 
@@ -126,3 +131,53 @@
 //     return newStr;
 // }
 // console.log(firstTwo(array));
+
+/****   8    ****/
+
+// var reverseString = function(str) {
+//     var newStr = "";
+//     for (var i = str.length - 1; i >= 0; i--) {
+//         newStr += str[i];
+//     }
+//     return newStr;
+// };
+// console.log(reverseString("Belgrade Institute for Technology"));
+
+/****    9   ****/
+
+// var combinations = function() {
+//     for (var i = 1; i <= 7; i++) {
+//         for (var j = 7; j >= 1; j--) {
+//             if (i === j) {
+//                 continue;
+//             } else {
+//                 console.log(i, j);
+//             }
+//         }
+//     }
+// };
+// combinations();
+
+/****   10   ****/
+
+// var isPrime = function(numb) {
+//     for (var i = 2; i < numb; i++) {
+//         if (numb % i === 0) {
+//             return false;
+//         }
+//     }
+//     return true;
+// };
+// console.log(isPrime(5));
+
+/****   11   ****/
+
+// var isPalindrome = function(str) {
+//     for (var i = 0; i < str.length; i++) {
+//         if (str[i] !== str[str.length - 1 - i]) {
+//             return false;
+//         }
+//     }
+//     return true;
+// };
+// console.log(isPalindrome("anavolimilovana"));
