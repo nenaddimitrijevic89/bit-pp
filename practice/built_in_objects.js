@@ -70,3 +70,16 @@
 //     return count;
 // }
 // console.log(lessThanMidd([-1, 8.1, 3, 6, 2.3, 44, 2.11]));
+
+/****   4    ****/
+
+var findSmallest = function(arr) {
+    var newArr = arr;
+    arr.sort(function(a, b) {
+        return a - b;
+    });
+    var min = arr[0];
+    var obj = { minValue: min, minLastIndex: newArr.indexOf(min) };
+    return obj;
+};
+console.log(findSmallest([1, 4, -2, 11, 8, 1, -2, 3]));
