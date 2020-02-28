@@ -73,13 +73,127 @@
 
 /****   4    ****/
 
-var findSmallest = function(arr) {
-    var newArr = arr;
-    arr.sort(function(a, b) {
-        return a - b;
-    });
-    var min = arr[0];
-    var obj = { minValue: min, minLastIndex: newArr.indexOf(min) };
-    return obj;
-};
-console.log(findSmallest([1, 4, -2, 11, 8, 1, -2, 3]));
+// var findSmallest = function (arr) {
+//     var min = arr[0];
+//     for (var i = arr.length - 1; i >= 0; i--) {
+//         if (arr[i] < min) {
+//             min = arr[i];
+//         }
+//     }
+//     var obj = { minValue: min, lastMinIndex: arr.lastIndexOf(min) }
+//     return obj;
+
+// };
+// console.log(findSmallest([1, 4, -2, 11, 8, 1, -2, 3]));
+
+/****    5    ****/
+
+//a
+
+// var findSmaller = function (arr, el) {
+//     var newArr = [];
+//     for (var i = 0; i < arr.length; i++) {
+//         if (arr[i] < el) {
+//             newArr.push(arr[i]);
+//         }
+//     }
+//     return newArr;
+// }
+// console.log(findSmaller([2, 3, 8, -2, 11, 4], 6));
+
+//b
+
+// var findWord = function (arr) {
+//     var b = "pro";
+//     var newArr = [];
+//     for (var i = 0; i < arr.length; i++) {
+//         if (b === arr[i].toLowerCase().slice(0, 3)) {
+//             newArr.push(arr[i]);
+//         }
+//     }
+//     return newArr;
+// }
+// console.log(findWord(["javascript", "product", "Programming"]));
+
+//c
+
+
+/****   6    ****/
+
+// var cart = [{ name: "apples", price: 100 },
+// { name: "milk", price: 80 },
+// { name: "bananas", price: 150 }]
+// function calculatePrice(arr) {
+//     var sum = 0;
+//     for (var i = 0; i < arr.length; i++) {
+//         sum += arr[i].price;
+//     }
+//     return sum;
+// }
+// var price=calculatePrice(cart);
+
+// var cart = [{ name: "apples", price: 100 },
+// { name: "milk", price: 80 },
+// { name: "bananas", price: 150 }]
+// function calculateAverPrice(arr) {
+//     var sum = 0;
+//     for (var i = 0; i < arr.length; i++) {
+//         sum += arr[i].price;
+//     }
+//     return sum / arr.length;
+// }
+// console.log(calculateAverPrice(cart))
+
+// var cart = [{ name: "apples", price: 100 },
+// { name: "milk", price: 80 },
+// { name: "bananas", price: 150 }]
+
+// function mostExpensive(arr) {
+//     var max = arr[0].price;
+//     var maxName = "";
+//     for (var i = 0; i < arr.length; i++) {
+//         if (max < arr[i].price) {
+//             // max = arr[i].price;
+//             maxName = arr[i].name;
+//         }
+//     }
+//     return maxName.toUpperCase();
+// }
+// console.log(mostExpensive(cart))
+
+/****    7    ****/
+
+//a
+
+// function isUpper(str) {
+
+//     if (str === str.toUpperCase()) {
+//         return true;
+//     }
+//     return false;
+// }
+// var res = isUpper("doktor")
+// console.log(res);
+
+//b
+
+// var hasDigits = function (str) {
+//     for (var i = 0; i < str.length; i++) {
+//         if (!isNaN(parseFloat(str[i]))) {
+//             return true;
+//         }
+//     }
+//     return false;
+// }
+// console.log(hasDigits("doktorihirurgija"))
+
+//c
+
+
+
+
+
+
+
+
+
