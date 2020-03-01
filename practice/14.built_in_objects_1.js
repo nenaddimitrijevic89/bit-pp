@@ -117,7 +117,6 @@
 
 //c
 
-
 /****   6    ****/
 
 // var cart = [{ name: "apples", price: 100 },
@@ -166,34 +165,93 @@
 //a
 
 // function isUpper(str) {
-
 //     if (str === str.toUpperCase()) {
 //         return true;
 //     }
 //     return false;
 // }
-// var res = isUpper("doktor")
-// console.log(res);
+// var res = isUpper("doktor");
+//console.log(res);
 
 //b
 
-// var hasDigits = function (str) {
+// var hasDigits = function(str) {
 //     for (var i = 0; i < str.length; i++) {
 //         if (!isNaN(parseFloat(str[i]))) {
 //             return true;
 //         }
 //     }
 //     return false;
-// }
-// console.log(hasDigits("doktorihirurgija"))
+// };
+//console.log(hasDigits("doktori1hirurgija"));
 
 //c
 
+// var isHexa = function(str) {
+//     var a = parseInt(str, 16);
+//     if (a.toString(16) === str) {
+//         return true;
+//     }
+//     return false;
+// };
+//console.log(isHexa("aaf0ff"));
 
+//c
 
+// var isBetween = function(numb) {
+//     if (numb >= 1900 && numb <= 2020) {
+//         return true;
+//     }
+//     return false;
+// };
+//console.log(isBetween(2020));
 
+//d
 
+// var validator = function(name, password, color, year) {
+//     var a = isUpper(name);
+//     var b = hasDigits(password);
+//     var c = isHexa(color);
+//     var d = isBetween(year);
+//     return {
+//         stringValidator: a,
+//         passwordValidator: b,
+//         colorValidator: c,
+//         yearValidator: d
+//     };
+// };
+// console.log(validator("Nenad", "nenad1", "aaffff", 1997));
 
+/****    11    ****/
 
+//a
 
+// var randomNumb = function() {
+//     return Math.floor(5 + Math.random() * 15);
+// };
+// console.log(randomNumb());
 
+//b
+
+// var randomInteger = function() {
+//     return Math.floor(50 + Math.random() * 50);
+// };
+// console.log(randomInteger());
+
+//c
+
+// var createArrOfNumbers = function(numb, callf) {
+//     var newArr = [];
+//     for (var i = 0; i < numb; i++) {
+//         newArr.push(randomInteger());
+//     }
+//     return newArr;
+// };
+// console.log(createArrOfNumbers(15));
+
+/****    12    ****/
+
+// var shuffle = function(array) {
+//     return array.sort(() => Math.random() - 0.5);
+// };
+// console.log(shuffle([1, 2, 3, 4, 5]));

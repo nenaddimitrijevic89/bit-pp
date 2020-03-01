@@ -80,8 +80,8 @@
 // for (var i = 0; i < a.length; i++) {
 //     for (var j = 0; j < a[i].length; j++) {
 //         if (a[i][j] === 24) {
-//             index.push([i, j]);
-//             //index.push(i, j);
+//             index[index.length] = i;
+//             index[index.length] = j;
 //         }
 //     }
 // }

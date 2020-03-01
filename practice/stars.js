@@ -14,7 +14,6 @@
 //     stars = stars + "* "
 //     shape = shape + stars + "\n"
 
-
 // }
 // console.log(shape);
 
@@ -157,51 +156,5 @@
 // for (var j = 0; j < d; j++) {
 //     result = result + row + "\n"
 
-
-
 // }
 // console.log(result)
-
-/***************************************** */
-
-
-
-var d = 4 ;
-var row = "";
-var stars = "";
-var result = "";
-for (var i = 0; i < d; i++) {
-
-
-
-
-
-
-}
-
-
-/******************************************************/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
