@@ -19,25 +19,43 @@ function Movie(title, genre, length) {
 function Program(date) {
     this.date = date;
     this.listOfMovies = [];
-    this.totalNumbOfMovies = [];
+    this.totalNumbOfMovies;
     this.addMovie = function (movie) {
         this.listOfMovies.push(movie);
+        this.totalNumbOfMovies = this.listOfMovies.length;
     }
     this.getData = function () {
-        var str = "";
+        var str = "\t";
+        var lengthOfAllMovies = 0;
+        for (var i = 0; i < this.listOfMovies.length; i++) {
+            str += this.listOfMovies[i].getData() + "\n\t";
+            lengthOfAllMovies += this.listOfMovies[i].length;
+        }
+        return this.date + ", " + lengthOfAllMovies + "\n" + str;
     }
 }
 
 function Festival(name) {
     this.name = name;
     this.listOfPrograms = [];
-    this.numberOfMovies = 0;
+    this.numberOfMovies;
     this.addProgram = function (program) {
-        this.listOfMovies.push(program);
+        this.listOfPrograms.push(program);
+
+    }
+    this.getData = function () {
+
     }
 }
 
 var horror = new Genre("Horror");
+var action = new Genre("action");
+var drama = new Genre("drama");
 
-var movie = new Movie("Sparta", horror, 115);
-console.log(movie.getData());
+var firstMovie = new Movie("Sparta", action, 115);
+var secondMovie = new Movie("Taxi driver", drama, 120);
+
+var firstProgram = new Program("06/03/20");
+firstProgram.addMovie(firstMovie);
+firstProgram.addMovie(secondMovie);
+console.log(firstProgram.getData());
