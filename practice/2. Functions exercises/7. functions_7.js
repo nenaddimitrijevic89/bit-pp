@@ -36,7 +36,7 @@
 // })("Goo morning", "d", 3);
 // console.log(insertCharacter);
 
-/****   4   ****/
+/****    4   ****/
 
 // var deleteCharacter = (function(str, p) {
 //   var newStr = "";
@@ -52,3 +52,43 @@
 
 // console.log(deleteCharacter);
 
+/****    5    ****/
+
+// var deleteEverySecond = (function (arr) {
+//     var newArr = [];
+//     for (var i = 0; i < arr.length; i++) {
+//         if (i % 2 === 0) {
+//             newArr.push(arr[i]);
+//         }
+//     }
+//     return newArr;
+// })([3, 5, 1, 8, 90, -4, 23, 1, 67])
+
+// console.log(deleteEverySecond);
+
+/****    6    ****/
+
+// var doubledElements = (function (arr, num1, num2) {
+//     var newArr = [];
+//     for (var i = 0; i < arr.length; i++) {
+//         if (i > 1 && i < 7) {
+//             newArr.push(arr[i] * 2)
+//         } else {
+//             newArr.push(arr[i]);
+//         }
+//     }
+//     return newArr;
+// })([3, 5, 1, 8, 90, -4, 23, 1, 67], 2, 6);
+
+// console.log(doubledElements);
+
+/****    7    ****/
+
+// var hasProperty = (function (obj, prop, val) {
+//     if (obj.hasOwnProperty(prop) && obj[prop] === val) {
+//         return true;
+//     }
+//     return false;
+// })({ "x": 20, "y": 30 }, "y", 30)
+
+// console.log(hasProperty)
