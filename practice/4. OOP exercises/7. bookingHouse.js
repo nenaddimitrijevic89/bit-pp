@@ -9,92 +9,102 @@
     AUSTRALIA: "AU"
   });
 
-  function Country(name, odds, continent) {
-    this.name = name;
-    this.odds = odds;
-    this.continent = continent;
-  }
-
-  function Person(name, surname, dateOfBird) {
-    this.name = name;
-    this.surname = surname;
-    this.dateOfBird = new Date(dateOfBird);
-  }
-  Person.prototype.getData = function () {
-    let day = this.dateOfBird.getDate();
-    let month = this.dateOfBird.getMonth() + 1;
-    let year = this.dateOfBird.getFullYear();
-    return `${this.name} ${this.surname}, ${day}.${month}.${year}.`;
-  };
-
-  Person.prototype.getYearsOld = function () {
-    let year = this.dateOfBird.getFullYear();
-    let today = new Date().getFullYear();
-    return today - year;
-  };
-
-  function Player(person, betAmount, country) {
-    this.person = person;
-    this.betAmount = betAmount;
-    this.country = country;
-  }
-  Player.prototype.getData = function () {
-    return '\t\t' + this.country.name.slice(0, 3).toUpperCase() + ", " + this.betAmount.toFixed(2) + ", " + this.person.name + " " + this.person.surname + ", " + this.person.getYearsOld() + " years";
-  };
-
-  function Address(country, city, postalCode, street, number) {
-    this.country = country;
-    this.city = city;
-    this.postalCode = postalCode;
-    this.street = street;
-    this.number = number;
-  }
-  Address.prototype.getData = function () {
-    return this.street + " " + this.number + ", " + this.postalCode + " " + this.city + ", " + this.country.name.slice(0, 3).toUpperCase();
-  };
-  Address.prototype.getFinalData = function () {
-    return '\t' + this.street + ", " + this.postalCode + " " + this.city;
-  }
-
-  function BettingPlace(address) {
-    this.address = address;
-    this.listOfPlayers = [];
-    this.numberOfPlayers = 0;
-    this.betSum = 0;
-  }
-  BettingPlace.prototype.addPlayers = function (player) {
-    this.listOfPlayers.push(player);
-    this.numberOfPlayers++;
-    this.betSum += player.betAmount;
-  };
-  BettingPlace.prototype.getData = function () {
-    let playerData = "";
-    for (let i = 0; i < this.listOfPlayers.length; i++) {
-      playerData += this.listOfPlayers[i].getData() + "\n";
+  class Country {
+    constructor(name, odds, continent) {
+      this.name = name;
+      this.odds = odds;
+      this.continent = continent;
     }
-    return playerData;
   }
 
-  function BettingHouse(competition) {
-    this.competition = competition;
-    this.listOfBettingPlace = [];
-    this.numberOfPlayers = 0;
-  }
-  BettingHouse.prototype.addbettingPlaces = function (place) {
-    this.listOfBettingPlace.push(place);
-    this.numberOfPlayers += place.numberOfPlayers;
-  };
-  BettingHouse.prototype.getData = function () {
-    let bettingHouseData = `${this.competition}, ${this.listOfBettingPlace.length} betting places, ${this.numberOfPlayers} bets`;
-    let addressAndPlayersData = "";
-    for (let i = 0; i < this.listOfBettingPlace.length; i++) {
-      let addressData = `\n${this.listOfBettingPlace[i].address.getFinalData()}, sum of all bets: ${this.listOfBettingPlace[i].betSum}`;
-      let playersData = `\n${this.listOfBettingPlace[i].getData()}`;
-
-      addressAndPlayersData += (addressData + playersData);
+  class Person {
+    constructor(name, surname, dateOfBird) {
+      this.name = name;
+      this.surname = surname;
+      this.dateOfBird = new Date(dateOfBird);
+    }
+    getData() {
+      let day = this.dateOfBird.getDate();
+      let month = this.dateOfBird.getMonth() + 1;
+      let year = this.dateOfBird.getFullYear();
+      return `${this.name} ${this.surname}, ${day}.${month}.${year}.`;
     };
 
-    return `${bettingHouseData}\t${addressAndPlayersData}`;
+    getYearsOld() {
+      let year = this.dateOfBird.getFullYear();
+      let today = new Date().getFullYear();
+      return today - year;
+    };
+  }
+
+  class Player {
+    constructor(person, betAmount, country) {
+      this.person = person;
+      this.betAmount = betAmount;
+      this.country = country;
+    }
+    getData() {
+      return '\t\t' + this.country.name.slice(0, 3).toUpperCase() + ", " + this.betAmount.toFixed(2) + ", " + this.person.name + " " + this.person.surname + ", " + this.person.getYearsOld() + " years";
+    };
+  }
+
+  class Address {
+    constructor(country, city, postalCode, street, number) {
+      this.country = country;
+      this.city = city;
+      this.postalCode = postalCode;
+      this.street = street;
+      this.number = number;
+    }
+    getData() {
+      return this.street + " " + this.number + ", " + this.postalCode + " " + this.city + ", " + this.country.name.slice(0, 3).toUpperCase();
+    };
+    getFinalData() {
+      return '\t' + this.street + ", " + this.postalCode + " " + this.city;
+    }
+  }
+
+  class BettingPlace {
+    constructor(address) {
+      this.address = address;
+      this.listOfPlayers = [];
+      this.numberOfPlayers = 0;
+      this.betSum = 0;
+    }
+    addPlayers(player) {
+      this.listOfPlayers.push(player);
+      this.numberOfPlayers++;
+      this.betSum += player.betAmount;
+    };
+    getData() {
+      let playerData = "";
+      this.listOfPlayers.forEach(element => {
+        playerData += element.getData() + "\n";
+      });
+      return playerData;
+    }
+  }
+
+  class BettingHouse {
+    constructor(competition) {
+      this.competition = competition;
+      this.listOfBettingPlace = [];
+      this.numberOfPlayers = 0;
+    }
+    addbettingPlaces(place) {
+      this.listOfBettingPlace.push(place);
+      this.numberOfPlayers += place.numberOfPlayers;
+    };
+    getData() {
+      let bettingHouseData = `${this.competition}, ${this.listOfBettingPlace.length} betting places, ${this.numberOfPlayers} bets`;
+      let addressAndPlayersData = "";
+      this.listOfBettingPlace.forEach(element => {
+        let addressData = `\n${element.address.getFinalData()}, sum of all bets: ${element.betSum}`;
+        let playersData = `\n${element.getData()}`;
+        addressAndPlayersData += (addressData + playersData);
+      });
+      return `${bettingHouseData}\t${addressAndPlayersData}`;
+    }
   }
 
   let createPlayer = function (name, surname, dateOfBird, countryName, odds, continent, bet) {
