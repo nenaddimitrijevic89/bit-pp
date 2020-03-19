@@ -1,14 +1,14 @@
-import { render } from './ui.js';
+import { renderObject } from './ui.js';
 
-const jokeData = () => {
+const dataObject = () => {
     let request = new XMLHttpRequest();
     request.open("GET", "https://api.chucknorris.io/jokes/random");
     request.send();
 
-    request.addEventListener("load", function() {
+    request.addEventListener("load", () => {
         let data = JSON.parse(request.responseText);
-        render(data.value);
+        renderObject(data.value, data.icon_url);
     })
 }
 
-export { jokeData };
+export { dataObject };

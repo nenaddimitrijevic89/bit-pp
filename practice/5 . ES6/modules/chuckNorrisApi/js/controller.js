@@ -1,7 +1,10 @@
-import * as data from './data.js'
-import * as ui from './ui.js'
+import * as data from './data.js';
+import * as ui from './ui.js';
 
 export const init = () => {
-    const btn = ui.getButton();
-    btn.addEventListener("click", data.jokeData)
+    render();
+}
+
+const render = () => {
+    ui.$button.addEventListener("click", data.dataObject)
 }
