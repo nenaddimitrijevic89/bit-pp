@@ -95,11 +95,22 @@
 
 /****   4    ****/
 
-var arr = [13, 11, 15, 5, 6, 1, 8, 12];
+// var arr = [13, 11, 15, 5, 6, 1, 8, 12];
 
-var sortedArr = function(array) {
-    for (var)
-}
+// var sortedArr = function(array) {
+//     var newArr = array.sort((a, b) => a - b);
+//     return newArr.map(el => el * 2);
+// }
+// console.log(sortedArr(arr))
+
+/****    5    ****/
+
+// var arr = [13, 11, 15, 5, 6, 1, 8, 12];
+
+// var reversedSortedArr = function(array) {
+//     return array.sort((a, b) => b - a);
+// }
+// console.log(reversedSortedArr(arr));
 
 // /****    6     ****/
 
